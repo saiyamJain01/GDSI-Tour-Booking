@@ -10,14 +10,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
 
-        TourPackage pack1 = new TourPackage("Bali Safari", 5, 45000.0);
-        TourPackage pack2 = new TourPackage("Thailand Getaway", 6, 35000.0);
-        TourPackage pack3 = new TourPackage("Ladakh Adventure", 7, 25000.0);
+        TourPackage p1 = new TourPackage("Bali Safari", 5, 100000.0);
+        TourPackage p2 = new TourPackage("Thailand Getaway", 6, 110000.0);
+        TourPackage p3 = new TourPackage("Ladakh Adventure", 7, 50000.0);
 
         // THIS WILL STORE ALL THE BOOKING DETAILS
         ArrayList<String> bookedTickets = new ArrayList<>();
 
-        System.out.println("Welcome to GDSI Tour Booking System!");
+        System.out.println("GDSI tour booking system is happy to welcome our client!");
 
         while (choice != 3) {
             System.out.println("\n=== Main Menu ===");
@@ -32,26 +32,26 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                        System.out.println("\n--- Available Packages ---");
-                        pack1.showDetails();
-                        pack2.showDetails();
-                        pack3.showDetails();
+                        System.out.println("\n    Available Packages    ");
+                        p1.showDetails();
+                        p2.showDetails();
+                        p3.showDetails();
                         System.out.println("--------------------------");
                         break;
                         
                     case 2:
-                        System.out.print("Enter passenger name: ");
+                        System.out.print("Enter your name: ");
                         String passengerName = scanner.nextLine();
                         
-                        System.out.print("Which package? (1=Bali, 2=Thailand, 3=Ladakh): ");
+                        System.out.print("Which page? (1=Bali, 2=Thailand, 3=Ladakh): ");
                         int packChoice = scanner.nextInt();
                         
                         String selectedDest = "";
-                        if (packChoice == 1) selectedDest = pack1.getDestination();
-                        else if (packChoice == 2) selectedDest = pack2.getDestination();
-                        else if (packChoice == 3) selectedDest = pack3.getDestination();
+                        if (pChoice == 1) selectedDest = p1.getDestination();
+                        else if (pChoice == 2) selectedDest = p2.getDestination();
+                        else if (pChoice == 3) selectedDest = p3.getDestination();
                         else {
-                            System.out.println("Invalid package selection.");
+                            System.out.println("Invalid page selection.");
                             break;
                         }
 
@@ -75,14 +75,14 @@ public class Main {
                         break;
                         
                     case 3:
-                        System.out.println("Exiting GDSI system. Safe travels!");
+                        System.out.println("Exiting GDSI system. Safe travels and happyyy journeyyyyy !");
                         break;
                         
                     default:
                         System.out.println("Invalid choice! Please enter 1, 2, or 3.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("\n[ERROR] Invalid input! Please type a NUMBER, not letters.");
+                System.out.println("\n[ERROR] Invalid input! Please type a NUMBER .");
                 scanner.nextLine();
             }
         }
