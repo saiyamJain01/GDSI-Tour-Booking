@@ -47,9 +47,9 @@ public class Main {
                         int packChoice = scanner.nextInt();
                         
                         String selectedDest = "";
-                        if (pChoice == 1) selectedDest = p1.getDestination();
-                        else if (pChoice == 2) selectedDest = p2.getDestination();
-                        else if (pChoice == 3) selectedDest = p3.getDestination();
+                        if (packChoice == 1) selectedDest = p1.getDestination();
+                        else if (packChoice == 2) selectedDest = p2.getDestination();
+                        else if (packChoice == 3) selectedDest = p3.getDestination();
                         else {
                             System.out.println("Invalid page selection.");
                             break;
