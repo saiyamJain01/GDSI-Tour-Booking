@@ -41,9 +41,9 @@ public class Main {
                         
                     case 2:
                         System.out.print("Enter your name: ");
-                        String passengerName = scanner.nextLine();
+                        String pName = scanner.nextLine();
                         
-                        System.out.print("Which page? (1=Bali, 2=Thailand, 3=Ladakh): ");
+                        System.out.print("Which pack? (1=Bali, 2=Thailand, 3=Ladakh): ");
                         int packChoice = scanner.nextInt();
                         
                         String selectedDest = "";
@@ -51,20 +51,20 @@ public class Main {
                         else if (packChoice == 2) selectedDest = p2.getDestination();
                         else if (packChoice == 3) selectedDest = p3.getDestination();
                         else {
-                            System.out.println("Invalid page selection.");
+                            System.out.println("Invalid pack selection.");
                             break;
                         }
 
                         
-                        String bookingInfo = "Passenger: " + passengerName + " | Destination: " + selectedDest;
-                        bookedTickets.add(bookingInfo);
+                        String info = "Passenger: " + pName + " | Destination: " + selectedDest;
+                      bookedTickets.add(info);
 
                     
                         try {
-                            FileWriter fw = new FileWriter("ticket.txt", true); // true mtlb naya data append hoga
+                            FileWriter fw = new FileWriter("ticket.txt", true); // data is appending
                             PrintWriter pw = new PrintWriter(fw);
                             pw.println("=== GDSI TOUR TICKET ===");
-                            pw.println(bookingInfo);
+                            pw.println(info);
                             pw.println("Status: CONFIRMED");
                             pw.println("========================");
                             pw.close();
