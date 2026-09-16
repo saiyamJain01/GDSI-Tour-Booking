@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
-import java.util.ArrayList; // Module 4
-import java.io.FileWriter;  // Module 4
-import java.io.PrintWriter; // Module 4
-import java.io.IOException; // Module 4
+import java.util.ArrayList; 
+import java.io.FileWriter;  
+import java.io.PrintWriter; 
+import java.io.IOException; 
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Main {
         TourPackage pack2 = new TourPackage("Thailand Getaway", 6, 35000.0);
         TourPackage pack3 = new TourPackage("Ladakh Adventure", 7, 25000.0);
 
-        // Module 4: ArrayList booking details store karne ke liye
+        // THIS WILL STORE ALL THE BOOKING DETAILS
         ArrayList<String> bookedTickets = new ArrayList<>();
 
         System.out.println("Welcome to GDSI Tour Booking System!");
@@ -28,7 +28,7 @@ public class Main {
 
             try {
                 choice = scanner.nextInt();
-                scanner.nextLine(); // Ye line Scanner ko saaf karti hai text input lene se pehle
+                scanner.nextLine(); 
 
                 switch (choice) {
                     case 1:
@@ -55,11 +55,11 @@ public class Main {
                             break;
                         }
 
-                        // ArrayList mein add kiya
+                        
                         String bookingInfo = "Passenger: " + passengerName + " | Destination: " + selectedDest;
                         bookedTickets.add(bookingInfo);
 
-                        // Module 4: File I/O se .txt file banana
+                    
                         try {
                             FileWriter fw = new FileWriter("ticket.txt", true); // true mtlb naya data append hoga
                             PrintWriter pw = new PrintWriter(fw);
